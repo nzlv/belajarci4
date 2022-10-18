@@ -37,6 +37,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->add('/coba', 'Coba::kerenbanget');
+$routes->get('/closures', function () {   //closures ini perilaku routes tanpa manggil controller
+    echo 'Ini closures boy';
+});
+
+$routes->get('/users', 'Admin\Users::index'); //Ini controller nya ada di dalem folder Controller/Admin
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
